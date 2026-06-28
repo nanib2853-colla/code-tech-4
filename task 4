@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+class Library
+{
+private:
+    int bookId;
+    char bookName[30];
+    char author[30];
+
+public:
+    void getData()
+    {
+        cout << "Enter Book ID: ";
+        cin >> bookId;
+
+        cout << "Enter Book Name: ";
+        cin >> bookName;
+
+        cout << "Enter Author Name: ";
+        cin >> author;
+    }
+
+    void displayData()
+    {
+        cout << "\n----- Library Record -----";
+        cout << "\nBook ID     : " << bookId;
+        cout << "\nBook Name   : " << bookName;
+        cout << "\nAuthor Name : " << author;
+        cout << endl;
+    }
+};
+
+int main()
+{
+    Library book;
+
+    cout << "===== Library Management System =====\n\n";
+
+    book.getData();
+    book.displayData();
+
+    return 0;
+}
